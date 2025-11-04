@@ -34,7 +34,7 @@ public class Program {
         }
 
         for (Person personOnList: searchList){
-            System.out.println(personOnList);
+            System.out.println(personOnList.getFirstName() +" "+ personOnList.getLastName());
         }
 
 
