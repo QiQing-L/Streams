@@ -35,15 +35,15 @@ public class Program {
         }
 
         for (Person personOnList: searchList){
-            System.out.println("What we found: " + personOnList.getFirstName() +" "+ personOnList.getLastName());
+            System.out.println(personOnList.getFirstName() +" "+ personOnList.getLastName());
         }
 
         // step 3:
         double averageAge = 0;
         for (Person person : peopleList) {
             averageAge += person.getAge();
-            averageAge = averageAge / peopleList.size();
         }
+        averageAge = averageAge / peopleList.size();
         System.out.println("Average Age: "+ averageAge);
 
 
