@@ -45,14 +45,14 @@ public class Program {
             totalAge += person.getAge();
         }
         double averageAge = totalAge / peopleList.size();
-        System.out.println("Average age: "+ averageAge);
+        System.out.println("\nAverage age: "+ averageAge);
 
         int minAge = peopleList.get(0).getAge();
         for (int i = 1; i < peopleList.size(); i++) {
             if (minAge > peopleList.get(i).getAge())
                 minAge = peopleList.get(i).getAge();
         }
-        System.out.println("Minimum age: " + minAge);
+        System.out.println("\nMinimum age: " + minAge);
 
 
         int maxAge = peopleList.get(0).getAge();
@@ -60,7 +60,7 @@ public class Program {
             if (maxAge < peopleList.get(i).getAge())
                 maxAge = peopleList.get(i).getAge();
         }
-        System.out.println("Maximum age: " + maxAge);
+        System.out.println("\nMaximum age: " + maxAge);
 
 
 
