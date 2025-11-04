@@ -34,17 +34,33 @@ public class Program {
             }
         }
 
+        System.out.println("Here's what we found: ");
         for (Person personOnList: searchList){
             System.out.println(personOnList.getFirstName() +" "+ personOnList.getLastName());
         }
 
         // step 3:
-        double averageAge = 0;
+        double totalAge = 0;
         for (Person person : peopleList) {
-            averageAge += person.getAge();
+            totalAge += person.getAge();
         }
-        averageAge = averageAge / peopleList.size();
-        System.out.println("Average Age: "+ averageAge);
+        double averageAge = totalAge / peopleList.size();
+        System.out.println("Average age: "+ averageAge);
+
+        int minAge = peopleList.get(0).getAge();
+        for (int i = 1; i < peopleList.size(); i++) {
+            if (minAge > peopleList.get(i).getAge())
+                minAge = peopleList.get(i).getAge();
+        }
+        System.out.println("Minimum age: " + minAge);
+
+
+        int maxAge = peopleList.get(0).getAge();
+        for (int i = 1; i < peopleList.size(); i++) {
+            if (maxAge < peopleList.get(i).getAge())
+                maxAge = peopleList.get(i).getAge();
+        }
+        System.out.println("Maximum age: " + maxAge);
 
 
 
