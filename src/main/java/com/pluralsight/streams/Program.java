@@ -20,6 +20,7 @@ public class Program {
         peopleList.add(new Person("Kayla", "Novak",66));
         peopleList.add(new Person("Kathleen", "Brown",95));
 
+        // step 2:
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please enter your name (first or last name):");
@@ -34,8 +35,17 @@ public class Program {
         }
 
         for (Person personOnList: searchList){
-            System.out.println(personOnList.getFirstName() +" "+ personOnList.getLastName());
+            System.out.println("What we found: " + personOnList.getFirstName() +" "+ personOnList.getLastName());
         }
+
+        // step 3:
+        double averageAge = 0;
+        for (Person person : peopleList) {
+            averageAge += person.getAge();
+            averageAge = averageAge / peopleList.size();
+        }
+        System.out.println("Average Age: "+ averageAge);
+
 
 
 
